@@ -1256,6 +1256,7 @@ html {
   }
   .hero__slider {
     min-height: 262px;
+    height: 262px;
   }
   .swiper-pagination-bullets {
     display: none;
