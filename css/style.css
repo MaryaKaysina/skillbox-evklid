@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 1 version
+*/
+
 :root {
   --col-btn: #FF9900;
   --col-btn-active: #E1670E;
@@ -127,7 +134,9 @@ html {
   width: 30px;
   height: 3px;
   background: var(--col-text);
+  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 .burger__menu::after{
   top: 0;
@@ -137,10 +146,12 @@ html {
 }
 .burger__menu--close {
   display: block;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .burger__menu--close::after {
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 .burger__nav {
   display: none;
@@ -586,10 +597,13 @@ html {
   z-index: -1;
 }
 .open-icon svg {
+  transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 .ui-accordion-content-active + .open-icon svg {
-  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 .accordion-panel {
   max-width: 1003px;
@@ -685,7 +699,10 @@ html {
 .agreement__label {
   display: inline-flex;
   align-items: center;
-  user-select: none;
+  -webkit-user-select: none;
+    -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .agreement__label::before {
   content: "";
@@ -1448,4 +1465,3 @@ html {
     margin-right: 15px;
   }
 }
-
